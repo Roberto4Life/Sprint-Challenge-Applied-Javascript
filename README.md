@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The branch structure of the HTML
+
 2. What is an event?
+
+An event is an action taken by the user that can be read (example, pressing a key)
 
 3. What is an event listener?
 
+Code that looks for and event and exectues code when the event is made.
+
 4. Why would we convert a NodeList into an Array?
 
+Not all code can use a nodelist and as such and array should be used.
+
 5. What is a component?
+
+A base to build multiple of the same item instead of creating individual items to put on the page.
 
 ### Git Set up
 
