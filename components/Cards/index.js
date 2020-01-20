@@ -24,16 +24,48 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then( response => {
     console.log('I am the axios for Article', response);
     
-    Object.values(response.data.articles).forEach(elements => {
-        elements.forEach(element => {
-            articleContain.append(createCards(element))
-        })
-    }) 
+// Guerenteed Solution
+
+//     Object.values(response.data.articles).forEach(elements => {
+//         elements.forEach(element => {
+//             articleContain.append(createCards(element))
+//         })
+//     }) 
+    response.data.articles.javascript.forEach(item => {
+        console.log(item)
+            const newArt = createCards(item);
+            articleContain.append(newArt)
+    })
+    response.data.articles.bootstrap.forEach(item => {
+        console.log(item)
+            const newArt = createCards(item);
+            articleContain.append(newArt)
+    })
+    response.data.articles.technology.forEach(item => {
+        console.log(item)
+            const newArt = createCards(item);
+            articleContain.append(newArt)
+    })
+    response.data.articles.jquery.forEach(item => {
+        console.log(item)
+            const newArt = createCards(item);
+            articleContain.append(newArt)
+    })
+    response.data.articles.node.forEach(item => {
+        console.log(item)
+            const newArt = createCards(item);
+            articleContain.append(newArt)
+    })
+
 })
 .catch(error => {
     console.log("the data was not returned", error)
   })
-function createCards(obj) {
+
+
+
+
+  function createCards(obj) {
 
     //adding elements
 
